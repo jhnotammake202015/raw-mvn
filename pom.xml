@@ -3,7 +3,7 @@
 	<groupId>com.mycompany.app</groupId>
 	<artifactId>my-app</artifactId>
 	<packaging>jar</packaging>
-	<version>6.4</version>
+	<version>6.5-SNAPSHOT</version>
 	<name>my-app</name>
 
 
@@ -26,7 +26,7 @@
 		<connection>scm:git:git@github.com:jhnotammake202015/raw-mvn.git</connection>
 		<url>scm:git:git@github.com:jhnotammake202015/raw-mvn.git</url>
 		<developerConnection>scm:git:git@github.com:jhnotammake202015/raw-mvn.git</developerConnection>
-	  <tag>my-app-6.4</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 	<build>
