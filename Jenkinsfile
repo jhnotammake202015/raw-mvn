@@ -5,7 +5,7 @@ pipeline {
         stage('Init'){
             steps {
                 echo "Running ${env.BUILD_ID}, number ${env.BUILD_NUMBER} - ${env.BUILD_DISPLAY_NAME}"
-                sh 'printenv'
+                echo sh(script: 'env|sort', returnStdout: true)
             }
         }
 
