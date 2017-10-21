@@ -34,5 +34,17 @@ pipeline {
         failure {  
             echo "with failure - ${currentBuild.result} | ${currentBuild.description}"
         }
+
+        success {
+            echo "Successful! ${currentBuild.result} | ${currentBuild.description}"
+        }
+
+        unstable{
+            echo "Unstable! ${currentBuild.result} | ${currentBuild.description}"
+        }
+
+        aborted{
+            echo "Aborted! ${currentBuild.result} | ${currentBuild.description}"
+        }
     }
 }
