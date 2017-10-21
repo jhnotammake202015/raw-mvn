@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Init'){
             steps {
-                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+                echo "Running ${env.BUILD_ID}, number ${env.BUILD_NUMBER} - ${env.BUILD_DISPLAY_NAME}"
             }
         }
 
