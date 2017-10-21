@@ -25,4 +25,14 @@ pipeline {
             }
         }
     }
+
+    post {
+        always {
+            echo "Finished"
+        }
+            
+        failure {  
+            echo "with failure - ${currentBuild.result} | ${currentBuild.description}"
+        }
+    }
 }
