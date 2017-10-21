@@ -32,11 +32,11 @@ pipeline {
         }
             
         failure {  
-            echo "with failure - ${currentBuild.result} | ${currentBuild.description}"
+            echo "with failure! ${currentBuild.result} | ${currentBuild.description}"
         }
 
         success {
-            echo "Successful! ${currentBuild.result} | ${currentBuild.description}"
+            echo "Successful!"
         }
 
         unstable{
