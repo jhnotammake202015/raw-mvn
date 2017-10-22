@@ -10,9 +10,12 @@ pipeline {
         }
 
         stage('Build') {
+            agent {
+                label 'vms'
+            }
             failFast true
             parallel {
-                stage('mvn clean install parallel') {                
+                stage('mvn clean install in parallel') {                
                     steps {
                         echo "On Branch A"
                     }
