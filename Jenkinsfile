@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 def header(label) {
-    echo "label"
+    echo label
 }
 
 
