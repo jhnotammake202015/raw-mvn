@@ -18,6 +18,7 @@ pipeline {
                     }        
                     steps {
                         echo "Running in vms slaves..."
+                        sh 'uname -a'
                     }
                 }            
             }
