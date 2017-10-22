@@ -1,4 +1,10 @@
 #!/usr/bin/env groovy
+
+def header(label) {
+    echo "label"
+}
+
+
 pipeline {
     agent any
     stages {
@@ -17,7 +23,7 @@ pipeline {
                         label 'vms'
                     }        
                     steps {
-                        echo "Running in vms slaves..."
+                        header("Running in vms slaves...h")
                         sh 'uname -a'
                     }
                 }            
