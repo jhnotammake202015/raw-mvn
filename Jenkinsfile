@@ -10,12 +10,12 @@ pipeline {
         }
 
         stage('Build') {
-            agent {
-                label 'vms'
-            }
             failFast true
             parallel {
-                stage('mvn clean install in parallel') {                
+                stage('mvn clean install in parallel') {       
+                    agent {
+                        label 'vms'
+                    }        
                     steps {
                         echo "Running in vms slaves..."
                     }
