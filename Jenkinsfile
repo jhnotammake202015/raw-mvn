@@ -17,7 +17,7 @@ pipeline {
             parallel {
                 stage('mvn clean install in parallel') {                
                     steps {
-                        echo "On Branch A"
+                        echo "Running in vms slaves..."
                     }
                 }            
             }
