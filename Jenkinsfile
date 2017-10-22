@@ -110,7 +110,7 @@ pipeline {
     stages {
         stage('Init'){
             steps {
-                echo "Running ${env.BUILD_ID}, number ${env.BUILD_NUMBER} - ${env.BUILD_DISPLAY_NAME}"
+                header("Running ${env.BUILD_ID}, number ${env.BUILD_NUMBER} - ${env.BUILD_DISPLAY_NAME}")
                 echo sh(script: 'env|sort', returnStdout: true)
             }
         }
@@ -131,12 +131,12 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                header("Testing..")
             }
          }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                header("Deploying....")
             }
         }
     }
