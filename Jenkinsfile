@@ -10,8 +10,13 @@ pipeline {
         }
 
         stage('Build') {
-            steps {
-                echo 'Building..'
+            failFast true
+            parallel {
+                stage('mvn clean install parallel') {                
+                    steps {
+                        echo "On Branch A"
+                    }
+                }            
             }
         }
         stage('Test') {
